@@ -13,7 +13,7 @@
         margin: 0;
         padding: 0;
         font-size: 1.1rem;
-        font-family: '微软雅黑'
+        font-family: '宋体'
     }
 
     body {
@@ -29,7 +29,7 @@
     }
 
     .box-t {
-        padding-top: 45%;
+        padding-top: 12rem;
     }
 
     .box-t ul.none {
@@ -48,42 +48,109 @@
         display: none
     }
 
+    img {
+        width: 10rem;
+        box-shadow: 0 0 .1rem .3rem white
+    }
+
     /*
     infinite
     */
 </style>
 
 <body>
+    
+    <audio style="display: none" autoplay src="images/青山黛玛.mp3"></audio>
     <div class="box-o">
         <div class="box-t">
             <ul class="box-li-o">
-                <li class="animated none">当你刚满16岁不久的春天</li>
-                <li class="animated none">遇上了我</li>
+                <li class="animated none">当你刚满16岁</li>
+                <li class="animated none">不久的春天</li>
+                <li class="animated none">遇上了</li>
+                <li class="animated none">可爱又帅气的我</li>
                 <li></li>
             </ul>
             <ul class="box-li-t">
                 <li class="animated none">2019年4月5日</li>
-                <li class="animated none">是我们认识的第一天</li>
+                <li class="animated none">这是我们</li>
+                <li class="animated none">认识的</li>
+                <li class="animated none">第一天</li>
                 <li></li>
             </ul>
             <ul class="box-li-th">
                 <li class="animated none">2019年4月8日</li>
+                <li class="animated none">认识以来第一次</li>
+                <li class="animated none">欺负你</li>
                 <li class="animated none">你第一次哭了</li>
                 <li></li>
             </ul>
             <ul class="box-li-for">
                 <li class="animated none">2019年4月9日</li>
-                <li class="animated none">我变成了你的初恋</li>
+                <li class="animated none">认真的告诉你</li>
+                <li class="animated none">做我老婆好不好</li>
+                <li class="animated none">你答应了</li>
                 <li></li>
             </ul>
             <ul class="box-li-five">
                 <li class="animated none">2019年4月23日</li>
-                <li class="animated none">第一次送你巧克力</li>
+                <li class="animated none">第一次送你</li>
+                <li class="animated none">我最爱吃的巧克力</li>
+                <li class="animated none">第一次的礼物</li>
                 <li></li>
             </ul>
             <ul class="box-li-six">
                 <li class="animated none">2019年6月18日</li>
-                <li class="animated none">第一次最生气的时候</li>
+                <li class="animated none">这是你第一次</li>
+                <li class="animated none">最生气的时候</li>
+                <li class="animated none">气鼓鼓的吃着大福饼</li>
+                <li></li>
+            </ul>
+            <ul class="box-li-seve">
+                <li class="animated none">2019年7月25日</li>
+                <li class="animated none">这一天可能是我们第一次最大的考验</li>
+                <li class="animated none">但是我不会轻易放手离开</li>
+                <li class="animated none">
+                    <img src="images/ss.jpg" alt="" style="transform:rotateZ(5deg)">
+                </li>
+                <li></li>
+            </ul>
+            <ul class="box-li-eag">
+                <li class="animated none">2019年7月27日</li>
+                <li class="animated none">我们第一次见面</li>
+                <li class="animated none">看见可爱的你</li>
+                <li class="animated none">
+                    <img src="images/04.jpg" alt="" style="transform:rotateZ(-5deg)">
+                </li>
+                <li></li>
+            </ul>
+            <ul class="box-li-nine">
+                <li class="animated none">我们第一次Kiss</li>
+                <li class="animated none">
+                    <img src="images/02.jpg" alt="" style="transform:rotateZ(5deg)">
+                </li>
+                <!-- <li class="animated none">我们第一次拥抱</li> -->
+                <li class="animated none">我第一次给你带上戒指</li>
+                <li class="animated none">
+                    <img src="images/jz.jpg" alt="" style="transform:rotateZ(-5deg)">
+                </li>
+                <li></li>
+            </ul>
+            <ul class="box-li-tem">
+                <li class="animated none">我们第一次合照</li>
+                <li class="animated none">
+                    <img src="images/01.jpg" alt="" style="transform:rotateZ(-5deg)">
+                </li>
+                <li class="animated none">我们第一次的拥抱</li>
+                <li class="animated none">
+                    <img src="images/03.jpg" alt="" style="transform:rotateZ(5deg)">
+                </li>
+                <li></li>
+            </ul>
+            <ul class="box-li-event">
+                <li class="animated none">今年我们不能一起过七夕</li>
+                <li class="animated none">我制作了一个时光机</li>
+                <li class="animated none">送给最可爱的你</li>
+                <li class="animated none">大宝贝~我爱你哦~</li>
                 <li></li>
             </ul>
         </div>
@@ -91,14 +158,19 @@
 </body>
 <script>
     window.onload = function () {
-        let t1, t2, t3 = [2000, 5000, 7000];
+        var t1 = [3000, 6000, 9000, 12000, 15000];
+        // var t1 = [1000, 2000, 3000, 4000, 5000];
         var b1 = document.querySelectorAll(".box-li-o li")
         var b2 = document.querySelectorAll(".box-li-t li")
         var b3 = document.querySelectorAll(".box-li-th li")
         var b4 = document.querySelectorAll(".box-li-for li")
         var b5 = document.querySelectorAll(".box-li-five li")
         var b6 = document.querySelectorAll(".box-li-six li")
-
+        var b7 = document.querySelectorAll(".box-li-seve li")
+        var b8 = document.querySelectorAll(".box-li-eag li")
+        var b9 = document.querySelectorAll(".box-li-nine li")
+        var b10 = document.querySelectorAll(".box-li-tem li")
+        var b11 = document.querySelectorAll(".box-li-event li")
         var boxT = document.querySelectorAll('ul')
         var dirk = 1
         var fun = (b, cla, times) => {
@@ -108,24 +180,36 @@
                         setTimeout(() => {
                             b[0].classList.remove('none')
                             b[0].classList.add(cla)
-                        }, 2000);
+                        }, t1[0]);
                         break;
                     case 1:
                         setTimeout(() => {
                             b[1].classList.remove('none')
                             b[1].classList.add(cla)
-                        }, 5000);
+                        }, t1[1]);
+                        break;
+                    case 2:
+                        setTimeout(() => {
+                            b[2].classList.remove('none')
+                            b[2].classList.add(cla)
+                        }, t1[2]);
+                        break;
+                    case 3:
+                        setTimeout(() => {
+                            b[3].classList.remove('none')
+                            b[3].classList.add(cla)
+                        }, t1[3]);
                         break;
                     default:
                         setTimeout(() => {
                             dirk++
-                            // console.log(dirk)
-                            // console.log('进来了')
-                            // console.log(boxT)
+                            console.log(dirk)
                             console.log(boxT[dirk - 2])
-                            boxT[dirk - 2].classList.add('none')
+                            if (dirk < 12) {
+                                boxT[dirk - 2].classList.add('none')
+                            }
                             darkTime()
-                        }, 9000);
+                        }, t1[4]);
                         break;
                 }
 
@@ -144,22 +228,34 @@
                     fun(b3, 'slideInLeft')
                     break;
                 case 4:
-                    fun(b4, 'zoomInUp')
+                    fun(b4, 'fadeInUp')
                     break;
                 case 5:
-                    fun(b5, 'zoomInUp')
+                    fun(b5, 'rotateIn')
                     break;
                 case 6:
-                    fun(b6, 'zoomInUp')
+                    fun(b6, 'lightSpeedIn')
+                    break;
+                case 7:
+                    fun(b7, 'fadeInRightBig')
+                    break;
+                case 8:
+                    fun(b8, 'bounceInUp')
+                    break;
+                case 9:
+                    fun(b9, 'slideInLeft')
+                    break;
+                case 10:
+                    fun(b10, 'fadeInDownBig')
+                    break;
+                case 11:
+                    fun(b11, 'flip')
                     break;
                 default:
                     break;
             }
         }
         darkTime()
-
-
-
     }
 </script>
 
