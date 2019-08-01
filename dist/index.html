@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="stylesheets/animate.css">
-    <title>Document</title>
+    <title>记录时光</title>
 </head>
 <style>
     * {
         margin: 0;
         padding: 0;
-        font-size: 1rem
+        font-size: 1.1rem;
+        font-family: '微软雅黑'
     }
 
     body {
@@ -24,19 +25,27 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     .box-t {
         padding-top: 45%;
     }
 
+    .box-t ul.none {
+        display: none
+    }
+
     .box-t li {
         list-style-type: none;
         text-align: center;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         margin: 5px auto;
         color: beige;
+    }
+
+    .box-t li.none {
+        display: none
     }
 
     /*
@@ -48,16 +57,33 @@
     <div class="box-o">
         <div class="box-t">
             <ul class="box-li-o">
-                <li class="animated ">当你刚满16岁的时候</li>
-                <li class="animated">却遇上了我</li>
-                <!-- <li>2019年4月5日</li>
-                <li>是我们认识的第一天</li>
-                <li>2019年4月8日</li>
-                <li>就欺负了下你，居然哭了</li>
-                <li>2019年4月9日</li>
-                <li>我变成了你的初恋</li>
-                <li>2019年4月23日</li>
-                <li>第一次送你巧克力</li> -->
+                <li class="animated none">当你刚满16岁不久的春天</li>
+                <li class="animated none">遇上了我</li>
+                <li></li>
+            </ul>
+            <ul class="box-li-t">
+                <li class="animated none">2019年4月5日</li>
+                <li class="animated none">是我们认识的第一天</li>
+                <li></li>
+            </ul>
+            <ul class="box-li-th">
+                <li class="animated none">2019年4月8日</li>
+                <li class="animated none">你第一次哭了</li>
+                <li></li>
+            </ul>
+            <ul class="box-li-for">
+                <li class="animated none">2019年4月9日</li>
+                <li class="animated none">我变成了你的初恋</li>
+                <li></li>
+            </ul>
+            <ul class="box-li-five">
+                <li class="animated none">2019年4月23日</li>
+                <li class="animated none">第一次送你巧克力</li>
+                <li></li>
+            </ul>
+            <ul class="box-li-six">
+                <li class="animated none">2019年6月18日</li>
+                <li class="animated none">第一次最生气的时候</li>
                 <li></li>
             </ul>
         </div>
@@ -65,28 +91,73 @@
 </body>
 <script>
     window.onload = function () {
+        let t1, t2, t3 = [2000, 5000, 7000];
         var b1 = document.querySelectorAll(".box-li-o li")
-        var dark = 1
-      
-        for (let index = 0; index < b1.length; index++) {
-            console.log(b1[index])
-            console.log(index)
-            switch (index) {
-                case 0:
-                    setTimeout(() => {
-                        b1[0].classList.add('fadeInDownBig')
-                    }, 2000);
-                    break;
+        var b2 = document.querySelectorAll(".box-li-t li")
+        var b3 = document.querySelectorAll(".box-li-th li")
+        var b4 = document.querySelectorAll(".box-li-for li")
+        var b5 = document.querySelectorAll(".box-li-five li")
+        var b6 = document.querySelectorAll(".box-li-six li")
+
+        var boxT = document.querySelectorAll('ul')
+        var dirk = 1
+        var fun = (b, cla, times) => {
+            for (let index = 0; index < b.length; index++) {
+                switch (index) {
+                    case 0:
+                        setTimeout(() => {
+                            b[0].classList.remove('none')
+                            b[0].classList.add(cla)
+                        }, 2000);
+                        break;
+                    case 1:
+                        setTimeout(() => {
+                            b[1].classList.remove('none')
+                            b[1].classList.add(cla)
+                        }, 5000);
+                        break;
+                    default:
+                        setTimeout(() => {
+                            dirk++
+                            // console.log(dirk)
+                            // console.log('进来了')
+                            // console.log(boxT)
+                            console.log(boxT[dirk - 2])
+                            boxT[dirk - 2].classList.add('none')
+                            darkTime()
+                        }, 9000);
+                        break;
+                }
+
+            }
+        }
+        console.log(dirk)
+        var darkTime = () => {
+            switch (dirk) {
                 case 1:
-                    setTimeout(() => {
-                        b1[1].classList.add('fadeInDownBig')
-                    }, 4000);
+                    fun(b1, 'fadeInDownBig')
+                    break;
+                case 2:
+                    fun(b2, 'zoomInUp')
+                    break;
+                case 3:
+                    fun(b3, 'slideInLeft')
+                    break;
+                case 4:
+                    fun(b4, 'zoomInUp')
+                    break;
+                case 5:
+                    fun(b5, 'zoomInUp')
+                    break;
+                case 6:
+                    fun(b6, 'zoomInUp')
                     break;
                 default:
                     break;
             }
-
         }
+        darkTime()
+
 
 
     }
