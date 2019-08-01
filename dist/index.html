@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheets/animate.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem
+    }
+
+    body {
+        background: url(../images/timg2.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .box-o {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid red;
+    }
+
+    .box-t {
+        padding-top: 45%;
+    }
+
+    .box-t li {
+        list-style-type: none;
+        text-align: center;
+        border: 1px solid red;
+        margin: 5px auto;
+        color: beige;
+    }
+
+    /*
+    infinite
+    */
+</style>
+
+<body>
+    <div class="box-o">
+        <div class="box-t">
+            <ul class="box-li-o">
+                <li class="animated ">当你刚满16岁的时候</li>
+                <li class="animated">却遇上了我</li>
+                <!-- <li>2019年4月5日</li>
+                <li>是我们认识的第一天</li>
+                <li>2019年4月8日</li>
+                <li>就欺负了下你，居然哭了</li>
+                <li>2019年4月9日</li>
+                <li>我变成了你的初恋</li>
+                <li>2019年4月23日</li>
+                <li>第一次送你巧克力</li> -->
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        var b1 = document.querySelectorAll(".box-li-o li")
+        var dark = 1
+      
+        for (let index = 0; index < b1.length; index++) {
+            console.log(b1[index])
+            console.log(index)
+            switch (index) {
+                case 0:
+                    setTimeout(() => {
+                        b1[0].classList.add('fadeInDownBig')
+                    }, 2000);
+                    break;
+                case 1:
+                    setTimeout(() => {
+                        b1[1].classList.add('fadeInDownBig')
+                    }, 4000);
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+
+    }
+</script>
+
+</html>
