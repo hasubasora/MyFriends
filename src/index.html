@@ -12,8 +12,8 @@
     * {
         margin: 0;
         padding: 0;
-        font-size: 1.1rem;
-        font-family: '宋体'
+        font-size: 1.2rem;
+        font-family: '楷体'
     }
 
     body {
@@ -48,7 +48,7 @@
         display: none
     }
 
-    img {
+    .box-t img {
         width: 10rem;
         box-shadow: 0 0 .1rem .3rem white
     }
@@ -56,46 +56,65 @@
     /*
     infinite
     */
+    .mis {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        width: 2rem;
+        animation: miss 5s linear infinite;
+    }
+
+    @keyframes miss {
+        from {
+            transform: rotateZ(0deg)
+        }
+
+        to {
+            transform: rotateZ(360deg)
+        }
+
+    }
 </style>
 
 <body>
-    
-    <audio style="display: none" autoplay src="images/青山黛玛.mp3"></audio>
+
+    <audio style="display: none" class="ao" autoplay src="images/青山黛玛.mp3"></audio>
     <div class="box-o">
+        <img class="mis" src="images/timg.png" alt="">
         <div class="box-t">
             <ul class="box-li-o">
-                <li class="animated none">当你刚满16岁</li>
-                <li class="animated none">不久的春天</li>
-                <li class="animated none">遇上了</li>
-                <li class="animated none">可爱又帅气的我</li>
+                <li class="animated none">当你刚满16岁的春天</li>
+                <li class="animated none">遇上了生命中最重要的</li>
+                <li class="animated none">可爱又帅气又迷人的我</li>
+                <li class="animated none"></li>
                 <li></li>
             </ul>
             <ul class="box-li-t">
                 <li class="animated none">2019年4月5日</li>
-                <li class="animated none">这是我们</li>
-                <li class="animated none">认识的</li>
-                <li class="animated none">第一天</li>
+                <li class="animated none">这是我们认识的第一天</li>
+                <li class="animated none">在几十亿人中遇上了你</li>
+                <li class="animated none">从此我们的故事开始了</li>
                 <li></li>
             </ul>
             <ul class="box-li-th">
                 <li class="animated none">2019年4月8日</li>
-                <li class="animated none">认识以来第一次</li>
-                <li class="animated none">欺负你</li>
-                <li class="animated none">你第一次哭了</li>
+                <li class="animated none">认识以来第一次欺负你</li>
+                <li class="animated none">第一次知道了你是个爱哭鬼</li>
+                <li class="animated none"></li>
                 <li></li>
             </ul>
             <ul class="box-li-for">
                 <li class="animated none">2019年4月9日</li>
-                <li class="animated none">认真的告诉你</li>
-                <li class="animated none">做我老婆好不好</li>
-                <li class="animated none">你答应了</li>
+                <li class="animated none">认真的告诉你，做我老婆好不好！</li>
+                <li class="animated none">你~</li>
+                <li class="animated none">答应了！！！</li>
                 <li></li>
             </ul>
             <ul class="box-li-five">
                 <li class="animated none">2019年4月23日</li>
-                <li class="animated none">第一次送你</li>
+                <li class="animated none">第一次送你零食</li>
                 <li class="animated none">我最爱吃的巧克力</li>
-                <li class="animated none">第一次的礼物</li>
+                <li class="animated none">比任何零食都好吃~</li>
                 <li></li>
             </ul>
             <ul class="box-li-six">
@@ -116,31 +135,30 @@
             </ul>
             <ul class="box-li-eag">
                 <li class="animated none">2019年7月27日</li>
-                <li class="animated none">我们第一次见面</li>
-                <li class="animated none">看见可爱的你</li>
+                <li class="animated none">我们第一次见面的时候你还害羞躲起来</li>
+                <li class="animated none">我就跑过去吓你，看见可爱的你</li>
                 <li class="animated none">
                     <img src="images/04.jpg" alt="" style="transform:rotateZ(-5deg)">
                 </li>
                 <li></li>
             </ul>
             <ul class="box-li-nine">
-                <li class="animated none">我们第一次Kiss</li>
+                <li class="animated none">我们第一次KISS，甜甜的初吻</li>
                 <li class="animated none">
                     <img src="images/02.jpg" alt="" style="transform:rotateZ(5deg)">
                 </li>
-                <!-- <li class="animated none">我们第一次拥抱</li> -->
-                <li class="animated none">我第一次给你带上戒指</li>
+                <li class="animated none">第一次给你带上我精心挑选的戒指</li>
                 <li class="animated none">
                     <img src="images/jz.jpg" alt="" style="transform:rotateZ(-5deg)">
                 </li>
                 <li></li>
             </ul>
             <ul class="box-li-tem">
-                <li class="animated none">我们第一次合照</li>
+                <li class="animated none">我们第一次合照，宝宝美美滴</li>
                 <li class="animated none">
                     <img src="images/01.jpg" alt="" style="transform:rotateZ(-5deg)">
                 </li>
-                <li class="animated none">我们第一次的拥抱</li>
+                <li class="animated none">我们第一次的拥抱，抱紧不放</li>
                 <li class="animated none">
                     <img src="images/03.jpg" alt="" style="transform:rotateZ(5deg)">
                 </li>
@@ -148,8 +166,8 @@
             </ul>
             <ul class="box-li-event">
                 <li class="animated none">今年我们不能一起过七夕</li>
-                <li class="animated none">我制作了一个时光机</li>
-                <li class="animated none">送给最可爱的你</li>
+                <li class="animated none">我制作了一个时光隧道</li>
+                <li class="animated none">送给我最可爱的宝宝~</li>
                 <li class="animated none">大宝贝~我爱你哦~</li>
                 <li></li>
             </ul>
@@ -173,7 +191,22 @@
         var b11 = document.querySelectorAll(".box-li-event li")
         var boxT = document.querySelectorAll('ul')
         var dirk = 1
-        var fun = (b, cla, times) => {
+
+
+        var mis = document.querySelector('.mis')
+        var ao = document.querySelector('.ao')
+        mis.addEventListener('click', () => {
+            stats()
+        })
+
+        var stats = () => {
+            if (ao.paused) {
+                ao.play();
+            } else {
+                ao.pause();
+            }
+        }
+        var fun = (b, cla) => {
             for (let index = 0; index < b.length; index++) {
                 switch (index) {
                     case 0:
